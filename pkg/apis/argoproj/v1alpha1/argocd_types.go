@@ -225,6 +225,9 @@ type ArgoCDRedisSpec struct {
 type ArgoCDRepoSpec struct {
 	// Resources defines the Compute Resources required by the container for Redis.
 	Resources *corev1.ResourceRequirements `json:"resources,omitempty"`
+
+	// Set the logging level. One of: debug|info|warn|error (default "info")
+	Loglevel string `json:"loglevel,omitempty"`
 }
 
 // ArgoCDRouteSpec defines the desired state for an OpenShift Route.
